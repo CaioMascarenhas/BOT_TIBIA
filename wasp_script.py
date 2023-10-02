@@ -11,10 +11,9 @@ import constants
 # F5 TO EAT FOOD
 
 def hunt_wasp():
-    while not keyboard.is_pressed('j'):
-        actions.goto('wasp_img/foto.png')
-        actions.goto('wasp_img/foto2.png') 
-        actions.goto('wasp_img/foto3.png')
+    while True:
+        for i in range(1,4):
+            actions.goto(f'wasp_img/foto{i}.png')
         actions.check_status('mana',1,*constants.POSITION_MANA_FULL,(0,54,119),'F1')
         actions.eat_food()
         actions.hole_down()
