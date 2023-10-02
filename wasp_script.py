@@ -1,5 +1,4 @@
 import pyautogui as pg
-import keyboard
 import actions
 import constants
 
@@ -17,17 +16,13 @@ def hunt_wasp():
         actions.check_status('mana',1,*constants.POSITION_MANA_FULL,(0,54,119),'F1')
         actions.eat_food()
         actions.hole_down()
-        actions.goto('wasp_img/foto5.png')
-        actions.goto('wasp_img/foto6.png')
-        actions.goto('wasp_img/foto7.png')
-        actions.goto('wasp_img/foto8.png')
-        actions.goto('wasp_img/foto9.png')
-        actions.goto('wasp_img/foto10.png')
+        for i in range(5,11):
+            actions.goto(f'wasp_img/foto{i}.png')
         actions.check_status('mana',1,*constants.POSITION_MANA_FULL,(0,54,119),'F1')
         actions.eat_food()
         actions.hole_down()
-        actions.goto('wasp_img/foto11.png')
-        actions.goto('wasp_img/foto12.png')
+        for i in range(11,13):
+            actions.goto(f'wasp_img/foto{i}.png')
         actions.check_status('mana',1,*constants.POSITION_MANA_FULL,(0,54,119),'F1')
         actions.eat_food()
         actions.goto('wasp_img/foto13.png')
