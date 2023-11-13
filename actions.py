@@ -19,7 +19,7 @@ def kill_monster():
                     pg.sleep(1)
                     break
                 print('esperando o monstro morrer') 
-            time.sleep(2)
+            time.sleep(1)
             print('procurando outro monstro')
         print(is_battle)
 
@@ -80,6 +80,3 @@ def goto(img):
                 goto(imagem)
 
             
-
-
-

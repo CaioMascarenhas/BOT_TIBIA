@@ -10,24 +10,25 @@ import constants
 # F5 TO EAT FOOD
 
 def hunt_wasp():
-    while True:
-        for i in range(1,4):
-            actions.goto(f'wasp_img/foto{i}.png')
-        actions.check_status('mana',1,*constants.POSITION_MANA_FULL,(0,54,119),'F1')
-        actions.eat_food()
-        actions.hole_down()
-        for i in range(5,11):
-            actions.goto(f'wasp_img/foto{i}.png')
-        actions.check_status('mana',1,*constants.POSITION_MANA_FULL,(0,54,119),'F1')
-        actions.eat_food()
-        actions.hole_down()
-        for i in range(11,13):
-            actions.goto(f'wasp_img/foto{i}.png')
-        actions.check_status('mana',1,*constants.POSITION_MANA_FULL,(0,54,119),'F1')
-        actions.eat_food()
-        actions.goto('wasp_img/foto13.png')
-        actions.hole_up('imgs/anchor_floor_3.png',130,130)
-        actions.goto('wasp_img/foto14.png')
-        actions.check_status('mana',1,*constants.POSITION_MANA_FULL,(0,54,119),'F1')
-        actions.eat_food()
-        actions.hole_up('imgs/anchor_floor_2.png',430,0)
+    #while True:
+    actions.check_battle()
+    for i in range(1,4):
+        actions.goto(f'wasp_img/foto{i}.png')
+    actions.check_status('mana',1,*constants.POSITION_MANA_FULL,(0,54,119),'F1')
+    actions.eat_food()
+    actions.hole_down()
+    for i in range(5,11):
+        actions.goto(f'wasp_img/foto{i}.png')
+    actions.check_status('mana',1,*constants.POSITION_MANA_FULL,(0,54,119),'F1')
+    actions.eat_food()
+    actions.hole_down()
+    for i in range(11,13):
+        actions.goto(f'wasp_img/foto{i}.png')
+    actions.check_status('mana',1,*constants.POSITION_MANA_FULL,(0,54,119),'F1')
+    actions.eat_food()
+    actions.goto('wasp_img/foto13.png')
+    actions.hole_up('imgs/anchor_floor_3.png',130,130)
+    actions.goto('wasp_img/foto14.png')
+    actions.check_status('mana',1,*constants.POSITION_MANA_FULL,(0,54,119),'F1')
+    actions.eat_food()
+    actions.hole_up('imgs/anchor_floor_2.png',430,0)
